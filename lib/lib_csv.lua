@@ -1,8 +1,11 @@
 
-game.library.csv = {}
-game.library.csv.path = game.library.path .. "/lib_csv"
-game.library.csv.ver_maj = 0
-game.library.csv.ver_min = 0
-game.library.csv.ver_rev = 1
+--CSV library
 
-game.library.csv.read = dofile(game.library.csv.path .. "/lib_csv_read.lua")
+game.lib.csv = {}
+game.lib.csv.name = "lib_csv"
+game.lib.csv.path = game.lib.path .. "/lib_csv"
+game.lib.csv.ver_maj = 0
+game.lib.csv.ver_min = 0
+game.lib.csv.ver_rev = 1
+
+game.lib.csv.read = dofile(game.lib.csv.path .. "/lib_csv_read.lua")

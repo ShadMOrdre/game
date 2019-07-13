@@ -1,8 +1,11 @@
 
-game.library.table = {}
-game.library.table.path = game.library.path .. "/lib_table"
-game.library.table.ver_maj = 0
-game.library.table.ver_min = 0
-game.library.table.ver_rev = 1
+--Table Library
 
-game.library.table.contains_substring = dofile(game.library.table.path .. "/lib_table_contains_substring.lua")
+game.lib.table = {}
+game.lib.table.name = "table"
+game.lib.table.path = game.lib.path .. "/lib_table"
+game.lib.table.ver_maj = 0
+game.lib.table.ver_min = 0
+game.lib.table.ver_rev = 1
+
+game.lib.table.contains_substring = dofile(game.lib.table.path .. "/lib_table_contains_substring.lua")
