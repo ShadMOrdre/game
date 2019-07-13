@@ -1,5 +1,6 @@
 
 game = {}
+game.name = "game"
 game.version = "1.0"
 game.path_mod = minetest.get_modpath(minetest.get_current_modname())
 game.path_world = minetest.get_worldpath()
@@ -20,17 +21,25 @@ minetest.log(S("[MOD] game:  Loading..."))
 --minetest.log(S("[MOD]: game:  Using world type " .. tostring(game.world_type)))
 
 
+game.lib = {} --Provides access to libraries functions called JIT.
+
 game.api = {}  --provides hooks for accessing the installed APIs
-game.library = {} --Provides access to libraries functions called JIT.
+
 game.players = {}  --controls all aspects of player.  Sets the definition of and controls attributes of(avatar and game stats)
+
 game.rules = {}  --Provides a library of functions for creating the "rules" of a game based on the type of game chosen.
+
+--game.nodes = {}  --Provides registration and runtime access to inworld nodes
+
 game.world = {}  --Provides general world data during runtime
 
 
 
-dofile(game.path_mod .. "/game_api.lua")
 dofile(game.path_mod .. "/game_lib.lua")
 
+dofile(game.path_mod .. "/game_api.lua")
+
+dofile(game.path_mod .. "/player.lua")
 
 
 
